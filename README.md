@@ -19,9 +19,10 @@
 ## Quick Start
 
 ```bash
-git clone https://github.com/norahe0304-art/30x-seo.git
-cd 30x-seo
+npx seo-30x
 ```
+
+That's it. The installer handles everything.
 
 **Optional: Configure DataForSEO** (for keywords/backlinks/SERP/AI visibility)
 
