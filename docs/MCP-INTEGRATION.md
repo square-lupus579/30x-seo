@@ -3,7 +3,7 @@
 
 ## Overview
 
-Claude SEO can integrate with Model Context Protocol (MCP) servers to access external APIs and enhance analysis capabilities.
+30x SEO can integrate with Model Context Protocol (MCP) servers to access external APIs and enhance analysis capabilities.
 
 ## Available Integrations
 
@@ -142,7 +142,7 @@ def get_crux_data(url: str, api_key: str) -> dict:
 
 ## Without API Keys
 
-If you don't have API keys, Claude SEO can still:
+If you don't have API keys, 30x SEO can still:
 
 1. Analyze HTML source for potential issues
 2. Identify common performance problems

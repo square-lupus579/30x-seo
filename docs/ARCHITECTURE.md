@@ -2,14 +2,14 @@
 
 ## Overview
 
-Claude SEO follows Anthropic's official Claude Code skill specification with a modular, multi-skill architecture.
+30x SEO follows Anthropic's official Claude Code skill specification with a modular, multi-skill architecture.
 
 ## Directory Structure
 
 ```
-~/.claude/
+30x-seo/
 ├── skills/
-│   ├── seo/              # Main orchestrator skill
+│   ├── 30x-seo/              # Main orchestrator skill
 │   │   ├── SKILL.md          # Entry point with routing logic
 │   │   └── references/       # On-demand reference files
 │   │       ├── cwv-thresholds.md
@@ -17,27 +17,41 @@ Claude SEO follows Anthropic's official Claude Code skill specification with a m
 │   │       ├── eeat-framework.md
 │   │       └── quality-gates.md
 │   │
-│   ├── seo-audit/            # Full site audit
-│   ├── seo-competitor-pages/ # Competitor comparison pages
-│   ├── seo-content/          # E-E-A-T analysis
-│   ├── seo-geo/              # AI search optimization
-│   ├── seo-hreflang/         # Hreflang/i18n SEO
-│   ├── seo-images/           # Image optimization
-│   ├── seo-page/             # Single page analysis
-│   ├── seo-plan/             # Strategic planning
-│   │   └── assets/           # Industry templates
-│   ├── seo-programmatic/     # Programmatic SEO
-│   ├── seo-schema/           # Schema markup
-│   ├── seo-sitemap/          # Sitemap analysis/generation
-│   └── seo-technical/        # Technical SEO
+│   ├── 30x-seo-page/             # Single page analysis
+│   ├── 30x-seo-technical/        # Technical SEO
+│   ├── 30x-seo-content-audit/    # E-E-A-T analysis
+│   ├── 30x-seo-schema/           # Schema markup
+│   ├── 30x-seo-sitemap/          # Sitemap analysis/generation
+│   ├── 30x-seo-hreflang/         # Hreflang/i18n SEO
+│   ├── 30x-seo-images/           # Image optimization
+│   ├── 30x-seo-internal-links/   # Internal link analysis
+│   ├── 30x-seo-backlinks/        # Backlink profile (DataForSEO)
+│   ├── 30x-seo-redirects/        # Redirect chain analysis
+│   ├── 30x-seo-content-brief/    # Content briefs
+│   ├── 30x-seo-content-writer/   # Content writing guidelines
+│   ├── 30x-seo-content-decay/    # Content decay detection
+│   ├── 30x-seo-cannibalization/  # Keyword cannibalization
+│   ├── 30x-seo-plan/             # Strategic planning
+│   ├── 30x-seo-architecture/     # Site architecture
+│   ├── 30x-seo-programmatic/     # Programmatic SEO
+│   ├── 30x-seo-competitor-pages/ # Competitor comparison pages
+│   ├── 30x-seo-monitor/          # GSC monitoring
+│   ├── 30x-seo-serp/             # SERP tracking (DataForSEO)
+│   ├── 30x-seo-ai-visibility/    # AI visibility (DataForSEO)
+│   ├── 30x-seo-keywords/         # Keyword research (DataForSEO)
+│   └── 30x-seo-geo-technical/    # AI crawler management
 │
-└── agents/
-    ├── seo-technical.md      # Technical SEO specialist
-    ├── seo-content.md        # Content quality reviewer
-    ├── seo-schema.md         # Schema markup expert
-    ├── seo-sitemap.md        # Sitemap architect
-    ├── seo-performance.md    # Performance analyzer
-    └── seo-visual.md         # Visual analyzer
+├── agents/
+│   ├── seo-technical.md      # Technical SEO specialist
+│   ├── seo-content.md        # Content quality reviewer
+│   ├── seo-schema.md         # Schema markup expert
+│   ├── seo-sitemap.md        # Sitemap architect
+│   ├── seo-performance.md    # Performance analyzer
+│   └── seo-visual.md         # Visual analyzer
+│
+├── scripts/                  # Python utilities
+├── hooks/                    # Pre/post edit hooks
+└── docs/                     # Documentation
 ```
 
 ## Component Types
@@ -88,7 +102,7 @@ User Request
     │
     ▼
 ┌─────────────────┐
-│   seo       │  ← Main orchestrator
+│   30x-seo       │  ← Main orchestrator
 │   (SKILL.md)    │
 └────────┬────────┘
          │
@@ -124,12 +138,12 @@ User Request (e.g., /seo page)
     │
     ▼
 ┌─────────────────┐
-│   seo       │  ← Routes to sub-skill
+│   30x-seo       │  ← Routes to sub-skill
 └────────┬────────┘
          │
          ▼
 ┌─────────────────┐
-│   seo-page      │  ← Sub-skill handles directly
+│   30x-seo-page  │  ← Sub-skill handles directly
 │   (SKILL.md)    │
 └─────────────────┘
 ```
@@ -165,7 +179,7 @@ User Request (e.g., /seo page)
 
 | Type | Pattern | Example |
 |------|---------|---------|
-| Skill | `seo-{name}/SKILL.md` | `seo-audit/SKILL.md` |
+| Skill | `30x-seo-{name}/SKILL.md` | `30x-seo-page/SKILL.md` |
 | Agent | `seo-{name}.md` | `seo-technical.md` |
 | Reference | `{topic}.md` | `cwv-thresholds.md` |
 | Script | `{action}_{target}.py` | `fetch_page.py` |
@@ -175,10 +189,10 @@ User Request (e.g., /seo page)
 
 ### Adding a New Sub-Skill
 
-1. Create `skills/seo-newskill/SKILL.md`
+1. Create `skills/30x-seo-newskill/SKILL.md`
 2. Add YAML frontmatter with name and description
 3. Write skill instructions
-4. Update main `seo/SKILL.md` to route to new skill
+4. Update main `30x-seo/SKILL.md` to route to new skill
 
 ### Adding a New Subagent
 

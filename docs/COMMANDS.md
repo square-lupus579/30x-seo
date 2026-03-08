@@ -2,7 +2,7 @@
 
 ## Overview
 
-All Claude SEO commands start with `/seo` followed by a subcommand.
+All 30x SEO commands start with `/seo` followed by a subcommand.
 
 ## Command List
 
