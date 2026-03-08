@@ -206,4 +206,4 @@ competitive intent keywords with accurate, structured content.
 - Schema markup additions
 - Conversion optimization suggestions
 
-[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+[PROTOCOL]: Update this header on changes, then check CLAUDE.md

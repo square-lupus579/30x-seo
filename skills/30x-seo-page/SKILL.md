@@ -76,4 +76,4 @@ Specific, actionable improvements with expected impact
 ### Schema Suggestions
 Ready-to-use JSON-LD code for detected opportunities
 
-[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+[PROTOCOL]: Update this header on changes, then check CLAUDE.md

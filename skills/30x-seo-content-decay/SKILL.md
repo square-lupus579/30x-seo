@@ -13,172 +13,172 @@ allowed-tools:
   - Read
 ---
 
-# 30x-seo Content Decay
+# Content Decay Detection
 
-> 发现排名下降的老内容，提示刷新
+> Find declining old content that needs refresh
 
-## 什么是 Content Decay
+## What is Content Decay
 
-内容会"腐烂"：
-- 信息过时（2023 的数据在 2026 没人看）
-- 竞品更新了更好的内容
-- 搜索意图变了
-- Google 算法更新
+Content "rots" over time:
+- Information becomes outdated (2023 data is stale in 2026)
+- Competitors publish better content
+- Search intent changes
+- Google algorithm updates
 
-**结果**：排名下降 → 流量下降 → 收入下降
-
----
-
-## 检测标准
-
-| 指标 | 阈值 | 说明 |
-|------|------|------|
-| **发布时间** | >6 个月 | 新内容不算 decay |
-| **流量变化** | 下降 >20% | 对比 3 个月前 |
-| **排名变化** | 下降 >5 位 | 主要关键词 |
-| **点击率** | 下降 >15% | 标题可能需要更新 |
-
-**触发刷新**：满足任意 2 条 = 需要刷新
+**Result**: Rankings drop → Traffic drops → Revenue drops
 
 ---
 
-## 工作流程
+## Detection Criteria
 
-### 方式 A: 有 GSC 数据
+| Metric | Threshold | Description |
+|--------|-----------|-------------|
+| **Publication Date** | >6 months | New content doesn't count as decay |
+| **Traffic Change** | Down >20% | Compared to 3 months ago |
+| **Ranking Change** | Down >5 positions | Primary keyword |
+| **CTR Change** | Down >15% | Title may need updating |
 
-```
-用户提供 GSC 导出数据（CSV）
-↓
-分析每个 URL:
-- 展示量趋势
-- 点击量趋势
-- 平均排名趋势
-- CTR 趋势
-↓
-识别 decay 内容
-↓
-输出刷新优先级列表
-```
+**Trigger Refresh**: Meeting any 2 criteria = needs refresh
 
-### 方式 B: 无 GSC 数据
+---
+
+## Workflow
+
+### Method A: With GSC Data
 
 ```
-用户提供 URL 列表
+User provides GSC export (CSV)
 ↓
-检查每个页面:
-- 发布日期 / 最后更新日期
-- 内容时效性信号（年份、"最新"等）
-- 竞品 SERP 分析（你的内容 vs Top 10）
+Analyze each URL:
+- Impression trends
+- Click trends
+- Average position trends
+- CTR trends
 ↓
-识别可能 decay 的内容
+Identify decaying content
 ↓
-输出建议列表
+Output refresh priority list
+```
+
+### Method B: Without GSC Data
+
+```
+User provides URL list
+↓
+Check each page:
+- Publication date / Last updated date
+- Content timeliness signals (years, "latest", etc.)
+- Competitor SERP analysis (your content vs Top 10)
+↓
+Identify potentially decaying content
+↓
+Output recommendation list
 ```
 
 ---
 
-## 输出格式
+## Output Format
 
 ```markdown
 # Content Decay Report
 
-## 高优先级刷新（流量影响大）
+## High Priority Refresh (High Traffic Impact)
 
-| 页面 | 发布日期 | 流量变化 | 排名变化 | 问题 | 建议 |
-|------|---------|---------|---------|------|------|
-| /blog/best-crm-2024 | 2024-03 | -45% | -8 位 | 年份过时 | 更新为 2026 版本 |
-| /guide/remote-work | 2023-11 | -30% | -5 位 | 工具推荐过时 | 更新工具列表 |
+| Page | Published | Traffic Change | Rank Change | Issue | Recommendation |
+|------|-----------|----------------|-------------|-------|----------------|
+| /blog/best-crm-2024 | 2024-03 | -45% | -8 positions | Year outdated | Update to 2026 version |
+| /guide/remote-work | 2023-11 | -30% | -5 positions | Tool recommendations outdated | Update tool list |
 
-## 中优先级刷新
+## Medium Priority Refresh
 
-| 页面 | 发布日期 | 问题 | 建议 |
-|------|---------|------|------|
+| Page | Published | Issue | Recommendation |
+|------|-----------|-------|----------------|
 | ... | ... | ... | ... |
 
-## 刷新建议
+## Refresh Recommendations
 
 ### /blog/best-crm-2024
 
-**问题诊断**:
-- 标题含 "2024"，已过时
-- 价格信息可能不准确
-- 缺少 2025-2026 新功能
+**Problem Diagnosis**:
+- Title contains "2024", outdated
+- Pricing info may be inaccurate
+- Missing 2025-2026 new features
 
-**刷新清单**:
-- [ ] 更新标题为 "Best CRM 2026"
-- [ ] 核实所有价格
-- [ ] 添加新工具（如 X, Y, Z）
-- [ ] 更新截图
-- [ ] 检查所有外链是否有效
-- [ ] 更新 Schema 中的 dateModified
+**Refresh Checklist**:
+- [ ] Update title to "Best CRM 2026"
+- [ ] Verify all prices
+- [ ] Add new tools (X, Y, Z)
+- [ ] Update screenshots
+- [ ] Check all external links are valid
+- [ ] Update dateModified in Schema
 
-**预估影响**: 恢复 ~40% 流量
+**Estimated Impact**: Recover ~40% traffic
 ```
 
 ---
 
-## 刷新策略
+## Refresh Strategies
 
-### 轻度刷新（Quick Update）
+### Light Refresh (Quick Update)
 
-适用：信息小幅过时
+**When**: Minor information outdated
 
-- 更新年份
-- 更新价格/数据
-- 修复死链
-- 更新 dateModified
+- Update years
+- Update prices/data
+- Fix dead links
+- Update dateModified
 
-### 中度刷新（Content Update）
+### Medium Refresh (Content Update)
 
-适用：内容部分过时
+**When**: Content partially outdated
 
-- 重写过时章节
-- 添加新信息
-- 更新图片/截图
-- 添加新的 H2 章节
+- Rewrite outdated sections
+- Add new information
+- Update images/screenshots
+- Add new H2 sections
 
-### 重度刷新（Content Rewrite）
+### Heavy Refresh (Content Rewrite)
 
-适用：内容大幅过时或意图变化
+**When**: Content significantly outdated or intent changed
 
-- 重新分析 SERP 意图
-- 重写大部分内容
-- 可能需要新的 content-brief
-- 保留 URL（301 历史权重）
+- Re-analyze SERP intent
+- Rewrite most content
+- May need new content-brief
+- Keep URL (preserve 301 historical equity)
 
 ---
 
-## 使用方式
+## Usage
 
 ```bash
-# 有 GSC 数据
-/30x-seo content-decay --gsc [csv文件]
+# With GSC data
+/seo content-decay --gsc [csv-file]
 
-# 无 GSC 数据，提供 URL 列表
-/30x-seo content-decay --urls [url列表]
+# Without GSC, provide URL list
+/seo content-decay --urls [url-list]
 
-# 分析整站（爬取 sitemap）
-/30x-seo content-decay https://example.com
+# Analyze entire site (crawl sitemap)
+/seo content-decay https://example.com
 ```
 
 ---
 
-## 与其他技能的关系
+## Related Skills
 
-| 上游 | 本技能 | 下游 |
-|------|--------|------|
-| GSC 数据 | **30x-seo-content-decay** | 30x-seo-content-brief |
-| sitemap | ↓ 识别 decay | 30x-seo-content-writer |
-| | | （刷新内容）|
+| Upstream | This Skill | Downstream |
+|----------|------------|------------|
+| GSC data | **30x-seo-content-decay** | 30x-seo-content-brief |
+| sitemap | ↓ Identify decay | 30x-seo-content-writer |
+| | | (refresh content) |
 
 ---
 
-## 最佳实践
+## Best Practices
 
-1. **定期检查**: 每季度跑一次 decay 检测
-2. **优先高价值页面**: 先刷新流量/转化高的页面
-3. **保留 URL**: 刷新而非新建，保留历史权重
-4. **更新 dateModified**: 告诉 Google 内容已更新
-5. **内链检查**: 刷新后检查内链是否需要更新
+1. **Regular checks**: Run decay detection quarterly
+2. **Prioritize high-value pages**: Refresh high traffic/conversion pages first
+3. **Keep URLs**: Refresh rather than recreate, preserve historical equity
+4. **Update dateModified**: Tell Google content has been updated
+5. **Internal link check**: Check if internal links need updating after refresh
 
-[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+[PROTOCOL]: Update this header on changes, then check CLAUDE.md

@@ -24,9 +24,9 @@ allowed-tools:
 
 #### AI Crawler Management
 
-> **详细检查请用 `seo-geo-technical`**
+> **For detailed checks, use `seo-geo-technical`**
 
-此技能只检查 robots.txt 基础配置。AI 爬虫（GPTBot、ClaudeBot、PerplexityBot）的详细检查、llms.txt 生成、SSR 检查请使用 `seo-geo-technical`。
+This skill only checks basic robots.txt configuration. For detailed AI crawler checks (GPTBot, ClaudeBot, PerplexityBot), llms.txt generation, and SSR checks, use `seo-geo-technical`.
 
 ### 2. Indexability
 - Canonical tags: self-referencing, no conflicts with noindex
@@ -116,4 +116,4 @@ Google updated its JavaScript SEO documentation in December 2025 with critical c
 ### Medium Priority (fix within 1 month)
 ### Low Priority (backlog)
 
-[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+[PROTOCOL]: Update this header on changes, then check CLAUDE.md

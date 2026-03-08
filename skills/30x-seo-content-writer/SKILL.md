@@ -14,68 +14,68 @@ allowed-tools:
 
 ## What This Skill Does
 
-生成 SEO 优化的博客文章。
+Generate SEO-optimized blog articles.
 
-## Two Modes（两种模式）
+## Two Modes
 
-| 模式 | 输入 | 适用场景 |
-|------|------|---------|
-| **计划模式** | seo-plan 输出文件 | 有完整 SEO 策略，按日历写作 |
-| **独立模式** | 用户提供关键词 | 快速写一篇文章，无需完整规划 |
+| Mode | Input | Use Case |
+|------|-------|----------|
+| **Plan Mode** | seo-plan output files | Have complete SEO strategy, write per calendar |
+| **Standalone Mode** | User provides keyword | Quick single article, no full planning needed |
 
 ---
 
-## Mode 1: Plan Mode（计划模式）
+## Mode 1: Plan Mode
 
 ### Prerequisites
 
-已有 SEO 计划（`/seo plan`）：
-- `CONTENT-CALENDAR.md` - 内容日历
-- `SEO-STRATEGY.md` - 关键词和主题策略
+Have SEO plan (`/seo plan`):
+- `CONTENT-CALENDAR.md` - Content calendar
+- `SEO-STRATEGY.md` - Keyword and topic strategy
 
 ### Process
 
 ```
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
 │   seo-plan      │     │                 │     │                 │
-│   输出文件      │ ──> │    Generate     │ ──> │   Markdown      │
-│ CONTENT-CALENDAR│     │   SEO Content   │     │   博客文章      │
+│   output files  │ ──> │    Generate     │ ──> │   Markdown      │
+│ CONTENT-CALENDAR│     │   SEO Content   │     │   blog article  │
 │ SEO-STRATEGY    │     │                 │     │                 │
 └─────────────────┘     └─────────────────┘     └─────────────────┘
 ```
 
 ### Context from Plan
 
-| 信息 | 来源 | 用途 |
-|------|------|------|
-| **目标关键词** | SEO-STRATEGY.md | 标题、H2、正文优化 |
-| **主题集群** | SEO-STRATEGY.md | 内链规划 |
-| **竞品分析** | COMPETITOR-ANALYSIS.md | 差异化角度 |
+| Info | Source | Usage |
+|------|--------|-------|
+| **Target keywords** | SEO-STRATEGY.md | Title, H2, body optimization |
+| **Topic clusters** | SEO-STRATEGY.md | Internal link planning |
+| **Competitor analysis** | COMPETITOR-ANALYSIS.md | Differentiation angle |
 
 ---
 
-## Mode 2: Standalone Mode（独立模式）
+## Mode 2: Standalone Mode
 
 ### When to Use
 
-- 只想快速写一篇文章
-- 没有完整的 SEO 计划
-- 已经知道目标关键词
+- Just want to quickly write one article
+- Don't have a complete SEO plan
+- Already know the target keyword
 
 ### Required Input
 
-问用户：
+Ask user:
 
-1. **Topic/Title**: 文章主题
-2. **Target Keyword**: 主关键词
-3. **Secondary Keywords**: 次要关键词（可选）
+1. **Topic/Title**: Article topic
+2. **Target Keyword**: Primary keyword
+3. **Secondary Keywords**: Secondary keywords (optional)
 4. **Search Intent**: Informational / Commercial / Transactional
 5. **Target Length**: Short (800-1200) / Medium (1500-2000) / Long (2500+)
-6. **CTA Goal**: 读者应采取什么行动？
+6. **CTA Goal**: What action should readers take?
 
 ---
 
-## Content Generation（内容生成）
+## Content Generation
 
 ### Article Structure
 
@@ -157,10 +157,10 @@ For AI search visibility:
 
 ## Commands
 
-| 命令 | 模式 |
-|------|------|
-| `/seo content-writer` | 自动检测（有 seo-plan 输出则计划模式，否则独立模式）|
-| `/seo content-writer "topic"` | 独立模式，直接指定主题 |
+| Command | Mode |
+|---------|------|
+| `/seo content-writer` | Auto-detect (plan mode if seo-plan output exists, otherwise standalone) |
+| `/seo content-writer "topic"` | Standalone mode, directly specify topic |
 
 ---
 
@@ -168,9 +168,9 @@ For AI search visibility:
 
 | Skill | When to Use |
 |-------|-------------|
-| **seo-plan** | 先制定计划，再用计划模式生成内容 |
-| **seo-internal-links suggest** | 写完后生成内链建议 |
-| **seo-content-audit** | 写完后审计质量 |
+| **seo-plan** | Create plan first, then use plan mode to generate content |
+| **seo-internal-links suggest** | Generate internal link suggestions after writing |
+| **seo-content-audit** | Audit quality after writing |
 
 ---
 
@@ -188,4 +188,4 @@ For AI search visibility:
 - [ ] CTA aligned with business goal
 - [ ] No factual claims without sources
 
-[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+[PROTOCOL]: Update this header on changes, then check CLAUDE.md

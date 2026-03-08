@@ -15,7 +15,7 @@ allowed-tools:
 
 Monitor your own website's SEO performance using Google Search Console API.
 
-[PROTOCOL]: 变更时更新此头部
+[PROTOCOL]: Update this header on changes, then check CLAUDE.md
 
 ## Prerequisites
 

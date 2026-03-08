@@ -106,4 +106,4 @@ allowed-tools:
 - `STRUCTURE.md` — site architecture documentation
 - URL count and organization summary
 
-[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+[PROTOCOL]: Update this header on changes, then check CLAUDE.md

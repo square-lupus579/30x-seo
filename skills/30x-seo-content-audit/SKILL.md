@@ -12,18 +12,18 @@ allowed-tools:
 
 # Content Quality Audit
 
-> 同时检查传统 SEO（E-E-A-T）和 AI 搜索（可引用性）
+> Check both traditional SEO (E-E-A-T) and AI search (citability)
 
-## 两个维度
+## Two Dimensions
 
-| 维度 | 目标 | 关键指标 |
-|------|------|----------|
-| **传统 SEO** | Google 排名 | E-E-A-T 评分、关键词、结构 |
-| **AI 可引用性** | ChatGPT/Perplexity 引用 | 可提取性、权威信号、第三方存在 |
+| Dimension | Goal | Key Metrics |
+|-----------|------|-------------|
+| **Traditional SEO** | Google rankings | E-E-A-T score, keywords, structure |
+| **AI Citability** | ChatGPT/Perplexity citations | Extractability, authority signals, third-party presence |
 
 ---
 
-## Part 1: 传统 SEO - E-E-A-T 分析
+## Part 1: Traditional SEO - E-E-A-T Analysis
 
 ## E-E-A-T Framework (updated Sept 2025 QRG)
 
@@ -175,75 +175,75 @@ GEO is the emerging discipline of optimizing content specifically for AI-generat
 
 ---
 
-## Part 2: AI 可引用性 - 三大支柱
+## Part 2: AI Citability - Three Pillars
 
-> 来源：Princeton GEO 研究 + 行业最佳实践
+> Source: Princeton GEO Research + Industry Best Practices
 
-### 支柱 1: 结构（可提取性）
+### Pillar 1: Structure (Extractability)
 
-AI 系统提取的是段落，不是整页。每个关键主张应该能独立成文。
+AI systems extract paragraphs, not entire pages. Each key claim should stand alone.
 
-| 内容块类型 | 适用场景 | 示例 |
-|-----------|---------|------|
-| 定义块 | "什么是 X?" | "CRM 是一种管理客户关系的软件..." |
-| 步骤块 | "怎么做 X?" | "第一步...第二步...第三步..." |
-| 对比表 | "X vs Y" | 功能对比表格 |
-| 优缺点块 | 评估类问题 | "优点：... 缺点：..." |
-| FAQ 块 | 常见问题 | Q: ... A: ... |
-| 统计块 | 数据支撑 | "根据 2025 年调查，73% 的用户..." |
+| Content Block Type | Use Case | Example |
+|-------------------|----------|---------|
+| Definition block | "What is X?" | "CRM is software that manages customer relationships..." |
+| Steps block | "How to do X?" | "Step 1... Step 2... Step 3..." |
+| Comparison table | "X vs Y" | Feature comparison table |
+| Pros/cons block | Evaluation queries | "Pros:... Cons:..." |
+| FAQ block | Common questions | Q:... A:... |
+| Statistics block | Data support | "According to 2025 survey, 73% of users..." |
 
-**结构规则**：
-- 每段开头直接给答案（不要埋在后面）
-- 关键段落 40-60 词（AI 提取最佳长度）
-- H2/H3 标题用问句形式（匹配用户搜索）
-- 对比内容用表格，步骤内容用列表
+**Structure Rules**:
+- Lead each paragraph with the answer (don't bury it)
+- Key paragraphs 40-60 words (optimal AI extraction length)
+- Use question format for H2/H3 headings (match user search)
+- Use tables for comparisons, lists for steps
 
-### 支柱 2: 权威（可引用性）
+### Pillar 2: Authority (Citability)
 
-| 优化方法 | 可见性提升 | 怎么做 |
-|---------|:----------:|--------|
-| 引用来源 | +40% | 添加权威引用和链接 |
-| 添加统计 | +37% | 具体数字 + 来源 |
-| 专家引言 | +30% | "据 [专家] 称..." |
-| 权威语气 | +25% | 展示专业知识 |
-| 关键词堆砌 | **-10%** | **会降低 AI 可见性** |
+| Optimization Method | Visibility Boost | How to Do |
+|---------------------|:----------------:|-----------|
+| Cite sources | +40% | Add authoritative citations and links |
+| Add statistics | +37% | Specific numbers + source |
+| Expert quotes | +30% | "According to [expert]..." |
+| Authoritative tone | +25% | Demonstrate expertise |
+| Keyword stuffing | **-10%** | **Reduces AI visibility** |
 
-**最佳组合**：流畅度 + 统计数据 = 最大提升
+**Best combination**: Fluency + Statistics = Maximum boost
 
-### 支柱 3: 存在（第三方曝光）
+### Pillar 3: Presence (Third-Party Exposure)
 
-AI 不只引用你的网站，还引用你出现的地方。
+AI doesn't just cite your website, it cites where you appear.
 
-| 平台 | AI 引用占比 | 行动 |
-|------|:----------:|------|
-| Wikipedia | 7.8% | 确保品牌页面准确 |
-| Reddit | 1.8% | 在相关社区参与讨论 |
-| YouTube | 高 | 创建视频内容 |
-| 评测网站 | 中 | G2, Capterra 保持更新 |
-| Quora | 中 | 深度回答相关问题 |
+| Platform | AI Citation Share | Action |
+|----------|:-----------------:|--------|
+| Wikipedia | 7.8% | Ensure brand page is accurate |
+| Reddit | 1.8% | Participate in relevant communities |
+| YouTube | High | Create video content |
+| Review sites | Medium | Keep G2, Capterra updated |
+| Quora | Medium | Give in-depth answers to related questions |
 
 ---
 
-## 综合评分输出
+## Combined Score Output
 
 ```
-内容质量审计报告
+Content Quality Audit Report
 
-1. 传统 SEO 得分: XX/100
+1. Traditional SEO Score: XX/100
    - Experience: XX/25
    - Expertise: XX/25
    - Authoritativeness: XX/25
    - Trustworthiness: XX/25
 
-2. AI 可引用性得分: XX/100
-   - 结构可提取性: XX/33
-   - 权威信号: XX/33
-   - 第三方存在: XX/33
+2. AI Citability Score: XX/100
+   - Structure Extractability: XX/33
+   - Authority Signals: XX/33
+   - Third-Party Presence: XX/33
 
-3. 综合得分: XX/100
+3. Combined Score: XX/100
 
-4. 优先修复项
-   - [具体建议]
+4. Priority Fixes
+   - [Specific recommendations]
 ```
 
-[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+[PROTOCOL]: Update this header on changes, then check CLAUDE.md

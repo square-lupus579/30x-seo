@@ -9,78 +9,78 @@ allowed-tools:
   - Read
 ---
 
-# SEO Plan（SEO 策略规划）
+# SEO Strategy Planning
 
 ## What This Skill Does
 
-制定 SEO 策略：分析竞品、规划关键词、制定内容日历、输出实施路线图。
+Create SEO strategy: analyze competitors, plan keywords, create content calendar, output implementation roadmap.
 
-**不做的事**：
-- 网站架构设计 → 用 `site-architecture`
-- 技术 SEO 检查 → 用 `seo-technical`
-- 内容生成 → 用 `seo-content-writer`
+**Does NOT do**:
+- Website architecture design → use `site-architecture`
+- Technical SEO checks → use `seo-technical`
+- Content generation → use `seo-content-writer`
 
 ---
 
 ## Optional Input
 
-| 输入 | 来源 | 说明 |
-|------|------|------|
-| **seo-keywords 输出** | `/seo keywords` | 如果已有关键词研究，读取作为策略输入 |
+| Input | Source | Description |
+|-------|--------|-------------|
+| **seo-keywords output** | `/seo keywords` | If keyword research exists, read as strategy input |
 
-> 不是强制依赖。可以先规划再研究，也可以先研究再规划。
+> Not a hard dependency. You can plan first then research, or research first then plan.
 
 ---
 
 ## Process
 
-### Step 1: Discovery（收集信息）
+### Step 1: Discovery
 
-问用户：
-- 业务类型（SaaS / 电商 / 本地服务 / 媒体 / 其他）
-- 目标受众（谁是你的客户？）
-- 主要竞品（3-5 个）
-- 目标（流量？转化？品牌？）
-- 现有网站？（有 → 分析现状；没有 → 新站规划）
+Ask user:
+- Business type (SaaS / E-commerce / Local service / Media / Other)
+- Target audience (Who are your customers?)
+- Main competitors (3-5)
+- Goals (Traffic? Conversions? Brand?)
+- Existing website? (Yes → analyze current state; No → new site planning)
 
-### Step 2: Competitor Analysis（竞品分析）
+### Step 2: Competitor Analysis
 
-对每个竞品，分析：
+For each competitor, analyze:
 
-| 维度 | 检查项 |
-|------|--------|
-| **内容** | 有哪些页面？博客频率？内容深度？|
-| **关键词** | 排名哪些词？内容主题？|
-| **E-E-A-T** | 作者信息？专家背书？信任信号？|
-| **结构** | URL 层级？导航设计？|
+| Dimension | Check Points |
+|-----------|--------------|
+| **Content** | What pages? Blog frequency? Content depth? |
+| **Keywords** | What keywords rank? Content topics? |
+| **E-E-A-T** | Author info? Expert endorsements? Trust signals? |
+| **Structure** | URL hierarchy? Navigation design? |
 
-工具：WebFetch + Perplexity
+Tools: WebFetch + Perplexity
 
-输出：`COMPETITOR-ANALYSIS.md`
+Output: `COMPETITOR-ANALYSIS.md`
 
-### Step 3: Keyword Strategy（关键词策略）
+### Step 3: Keyword Strategy
 
-如果有 seo-keywords 输出 → 读取并整合
-如果没有 → 基于竞品分析 + 用户输入推断
+If seo-keywords output exists → read and integrate
+If not → infer from competitor analysis + user input
 
-确定：
-- 核心关键词（3-5 个）
-- 长尾关键词（10-20 个）
-- 主题集群（Topic Clusters）
+Determine:
+- Core keywords (3-5)
+- Long-tail keywords (10-20)
+- Topic clusters
 
-输出：整合到 `SEO-STRATEGY.md`
+Output: Integrate into `SEO-STRATEGY.md`
 
-### Step 4: Content Planning（内容规划）
+### Step 4: Content Planning
 
-基于关键词策略，规划：
+Based on keyword strategy, plan:
 
-| 内容类型 | 示例 |
-|---------|------|
-| **支柱页** | 核心主题的权威长文 |
-| **集群页** | 围绕支柱的细分文章 |
-| **博客** | 定期更新的内容 |
+| Content Type | Example |
+|--------------|---------|
+| **Pillar pages** | Authoritative long-form on core topics |
+| **Cluster pages** | Detailed articles around pillars |
+| **Blog posts** | Regular update content |
 
-输出：`CONTENT-CALENDAR.md`
+Output: `CONTENT-CALENDAR.md`
 
 ```markdown
 # Content Calendar
@@ -92,47 +92,47 @@ allowed-tools:
 | 2 | ... | ... | Cluster | Medium |
 ```
 
-### Step 5: Implementation Roadmap（实施路线）
+### Step 5: Implementation Roadmap
 
-简化版路线图：
+Simplified roadmap:
 
-| 阶段 | 时间 | 重点 |
-|------|------|------|
-| **启动** | Week 1-2 | 技术基础（→ seo-technical）、核心页面 |
-| **内容** | Week 3-8 | 按日历发布内容（→ seo-content-writer）|
-| **优化** | Week 9-12 | 监控排名、调整策略 |
+| Phase | Timeline | Focus |
+|-------|----------|-------|
+| **Launch** | Week 1-2 | Technical foundation (→ seo-technical), core pages |
+| **Content** | Week 3-8 | Publish per calendar (→ seo-content-writer) |
+| **Optimize** | Week 9-12 | Monitor rankings, adjust strategy |
 
-输出：`IMPLEMENTATION-ROADMAP.md`
-
----
-
-## Output（输出文件）
-
-| 文件 | 内容 |
-|------|------|
-| `SEO-STRATEGY.md` | 完整策略：目标、关键词、主题集群 |
-| `COMPETITOR-ANALYSIS.md` | 竞品分析报告 |
-| `CONTENT-CALENDAR.md` | 内容日历（供 seo-content-writer 使用）|
-| `IMPLEMENTATION-ROADMAP.md` | 实施路线图 |
+Output: `IMPLEMENTATION-ROADMAP.md`
 
 ---
 
-## Integration（与其他技能的关系）
+## Output Files
 
-```
-seo-keywords ──(可选)──> seo-plan
-                            │
-                            ├──> seo-content-writer（内容生成）
-                            ├──> site-architecture（架构设计）
-                            └──> seo-technical（技术检查）
-```
-
-| 技能 | 何时使用 |
+| File | Content |
 |------|---------|
-| `seo-keywords` | 规划前做关键词研究 |
-| `site-architecture` | 需要详细架构设计时 |
-| `seo-content-writer` | 按日历生成内容 |
-| `seo-technical` | 检查技术基础 |
+| `SEO-STRATEGY.md` | Complete strategy: goals, keywords, topic clusters |
+| `COMPETITOR-ANALYSIS.md` | Competitor analysis report |
+| `CONTENT-CALENDAR.md` | Content calendar (for seo-content-writer) |
+| `IMPLEMENTATION-ROADMAP.md` | Implementation roadmap |
+
+---
+
+## Integration
+
+```
+seo-keywords ──(optional)──> seo-plan
+                                │
+                                ├──> seo-content-writer (content generation)
+                                ├──> site-architecture (architecture design)
+                                └──> seo-technical (technical checks)
+```
+
+| Skill | When to Use |
+|-------|-------------|
+| `seo-keywords` | Do keyword research before planning |
+| `site-architecture` | When detailed architecture design needed |
+| `seo-content-writer` | Generate content per calendar |
+| `seo-technical` | Check technical foundation |
 
 ---
 
@@ -140,18 +140,18 @@ seo-keywords ──(可选)──> seo-plan
 
 ```
 User: /seo plan
-Claude: 请告诉我：
-1. 业务类型？
-2. 目标受众？
-3. 主要竞品？
-4. SEO 目标？
+Claude: Please tell me:
+1. Business type?
+2. Target audience?
+3. Main competitors?
+4. SEO goals?
 
-User: SaaS 项目管理工具，目标是中小企业，竞品是 Asana、Monday、Notion
+User: SaaS project management tool, targeting SMBs, competitors are Asana, Monday, Notion
 
-Claude: [执行竞品分析...]
-        [制定关键词策略...]
-        [规划内容日历...]
-        [输出 4 个文件]
+Claude: [Executing competitor analysis...]
+        [Creating keyword strategy...]
+        [Planning content calendar...]
+        [Outputting 4 files]
 ```
 
-[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+[PROTOCOL]: Update this header on changes, then check CLAUDE.md

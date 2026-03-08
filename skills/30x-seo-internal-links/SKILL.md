@@ -14,12 +14,12 @@ allowed-tools:
 
 ## What This Skill Does
 
-**两个功能**：
+**Two functions**:
 
-| 模式 | 输入 | 输出 |
-|------|------|------|
-| **分析模式** | 网站 URL | 内链问题报告 |
-| **生成模式** | 新文章 + 网站结构 | 内链建议（链接到哪里、锚文本）|
+| Mode | Input | Output |
+|------|-------|--------|
+| **Analysis Mode** | Website URL | Internal link issues report |
+| **Generation Mode** | New article + site structure | Link suggestions (where to link, anchor text) |
 
 Good internal linking:
 - Helps Google find all your pages
@@ -196,93 +196,93 @@ Link Distribution:
 
 ---
 
-## Part 2: Link Generation Mode（生成模式）
+## Part 2: Link Generation Mode
 
 ### When to Use
 
-写完新文章后，不知道该链接到哪里。
+After writing a new article and unsure where to link.
 
 ### Input
 
-1. **新文章内容**（或 URL）
-2. **网站现有页面列表**（或网站 URL 让技能爬取）
+1. **New article content** (or URL)
+2. **Site existing page list** (or website URL to crawl)
 
 ### Process
 
 #### Step 1: Analyze New Article
-- 提取文章主题、关键词
-- 识别可链接的概念/术语
+- Extract article topic, keywords
+- Identify linkable concepts/terms
 
 #### Step 2: Match with Existing Pages
-- 找出与新文章主题相关的现有页面
-- 按相关性排序
+- Find existing pages related to new article topic
+- Sort by relevance
 
 #### Step 3: Generate Suggestions
 
-**输出 3 类建议**：
+**Output 3 types of suggestions**:
 
-| 类型 | 说明 |
-|------|------|
-| **Outbound** | 新文章应该链接到哪些现有页面 |
-| **Inbound** | 哪些现有页面应该添加链接指向新文章 |
-| **Anchor Text** | 每个链接的建议锚文本 |
+| Type | Description |
+|------|-------------|
+| **Outbound** | Existing pages the new article should link to |
+| **Inbound** | Existing pages that should add links to new article |
+| **Anchor Text** | Suggested anchor text for each link |
 
 ### Output Format
 
 ```markdown
 # Internal Link Suggestions
 
-## 新文章信息
-- 标题: [文章标题]
-- URL: [文章 URL]
-- 主题: [主要主题]
-- 关键词: [关键词列表]
+## New Article Info
+- Title: [Article title]
+- URL: [Article URL]
+- Topic: [Main topic]
+- Keywords: [Keyword list]
 
-## Outbound Links（新文章 → 现有页面）
+## Outbound Links (New Article → Existing Pages)
 
-| 链接位置 | 目标页面 | 建议锚文本 | 原因 |
-|---------|---------|-----------|------|
-| 第 2 段 "SEO 优化" | /seo-guide | "SEO 优化指南" | 主题相关 |
-| 第 5 段 "关键词研究" | /keyword-research | "关键词研究方法" | 深入阅读 |
-| 结尾 CTA | /services | "我们的服务" | 转化引导 |
+| Link Location | Target Page | Suggested Anchor | Reason |
+|---------------|-------------|------------------|--------|
+| Paragraph 2 "SEO optimization" | /seo-guide | "SEO optimization guide" | Topic related |
+| Paragraph 5 "keyword research" | /keyword-research | "keyword research methods" | Deep reading |
+| Ending CTA | /services | "our services" | Conversion |
 
-## Inbound Links（现有页面 → 新文章）
+## Inbound Links (Existing Pages → New Article)
 
-| 来源页面 | 建议添加位置 | 建议锚文本 |
-|---------|-------------|-----------|
-| /seo-guide | "内部链接"相关段落 | "内部链接策略" |
-| /blog-index | 最新文章列表 | [文章标题] |
+| Source Page | Suggested Location | Suggested Anchor |
+|-------------|-------------------|------------------|
+| /seo-guide | "internal links" related paragraph | "internal link strategy" |
+| /blog-index | Latest articles list | [Article title] |
 
-## 实施清单
+## Implementation Checklist
 
-- [ ] 在新文章第 2 段添加链接到 /seo-guide
-- [ ] 在新文章第 5 段添加链接到 /keyword-research
-- [ ] 更新 /seo-guide 添加反向链接
+- [ ] Add link to /seo-guide in new article paragraph 2
+- [ ] Add link to /keyword-research in new article paragraph 5
+- [ ] Update /seo-guide to add backlink
 ```
 
 ### Example
 
 ```
-User: 我写了一篇关于"Core Web Vitals优化"的文章，应该链接到哪里？
+User: I wrote an article about "Core Web Vitals optimization", where should I link?
 
-Claude: [读取文章内容]
-        [读取网站现有页面]
-        [匹配相关页面]
+Claude: [Read article content]
+        [Read site existing pages]
+        [Match related pages]
 
-输出:
-- 链接到 /technical-seo（"技术SEO"）
-- 链接到 /page-speed（"页面速度优化"）
-- 链接到 /google-ranking-factors（"Google排名因素"）
-- 建议 /technical-seo 反向链接到这篇新文章
+Output:
+- Link to /technical-seo ("technical SEO")
+- Link to /page-speed ("page speed optimization")
+- Link to /google-ranking-factors ("Google ranking factors")
+- Suggest /technical-seo backlink to this new article
 ```
 
 ---
 
 ## Commands
 
-| 命令 | 模式 |
-|------|------|
-| `/seo internal-links https://example.com` | 分析模式 |
-| `/seo internal-links suggest [新文章]` | 生成模式 |
+| Command | Mode |
+|---------|------|
+| `/seo internal-links https://example.com` | Analysis mode |
+| `/seo internal-links suggest [new-article]` | Generation mode |
 
-[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+[PROTOCOL]: Update this header on changes, then check CLAUDE.md

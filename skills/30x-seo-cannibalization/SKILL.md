@@ -13,222 +13,222 @@ allowed-tools:
   - Read
 ---
 
-# 30x-seo Cannibalization
+# Keyword Cannibalization Detection
 
-> 发现多个页面抢同一关键词的问题
+> Find pages competing for the same keyword
 
-## 什么是 Keyword Cannibalization
+## What is Keyword Cannibalization
 
-**问题**：网站有多个页面都想排同一个关键词
+**Problem**: Multiple pages on your site targeting the same keyword.
 
 ```
-/blog/best-crm-software     → 目标: "best crm"
-/guide/crm-comparison       → 目标: "best crm"
-/products/crm               → 目标: "best crm"
+/blog/best-crm-software     → Target: "best crm"
+/guide/crm-comparison       → Target: "best crm"
+/products/crm               → Target: "best crm"
 ```
 
-**后果**：
-- Google 不知道该排哪个 → 都排不好
-- 内链权重分散
-- 用户体验混乱
-- 浪费爬取预算
+**Consequences**:
+- Google doesn't know which to rank → none rank well
+- Internal link equity is diluted
+- Confusing user experience
+- Wasted crawl budget
 
 ---
 
-## 检测方法
+## Detection Methods
 
-### 方式 A: 有 GSC 数据（推荐）
-
-```
-导入 GSC "查询" 报告
-↓
-按关键词分组
-↓
-找出同一关键词有多个 URL 的情况
-↓
-分析每个 URL 的:
-- 展示量
-- 点击量
-- 平均排名
-- 排名波动
-↓
-识别蚕食
-```
-
-**蚕食信号**：
-- 同一关键词 2+ URL 都有展示
-- 排名频繁波动（Google 在犹豫）
-- 两个页面排名都在 5-15 位（卡住了）
-
-### 方式 B: 无 GSC 数据
+### Method A: With GSC Data (Recommended)
 
 ```
-输入目标关键词列表
+Import GSC "Queries" report
 ↓
-对每个关键词:
-- site:domain.com "关键词" 搜索
-- 分析返回的多个结果
+Group by keyword
 ↓
-检查页面内容重叠度
+Find keywords with multiple URLs
 ↓
-识别潜在蚕食
+Analyze each URL's:
+- Impressions
+- Clicks
+- Average position
+- Position fluctuation
+↓
+Identify cannibalization
+```
+
+**Cannibalization Signals**:
+- Same keyword has 2+ URLs with impressions
+- Ranking fluctuates frequently (Google is indecisive)
+- Both pages stuck at positions 5-15
+
+### Method B: Without GSC Data
+
+```
+Input target keyword list
+↓
+For each keyword:
+- site:domain.com "keyword" search
+- Analyze multiple results returned
+↓
+Check content overlap between pages
+↓
+Identify potential cannibalization
 ```
 
 ---
 
-## 输出格式
+## Output Format
 
 ```markdown
 # Keyword Cannibalization Report
 
-## 发现 X 组蚕食问题
+## Found X Cannibalization Groups
 
-### 蚕食组 #1: "best crm software"
+### Group #1: "best crm software"
 
-| URL | 排名 | 展示量 | 点击量 | 内容角度 |
-|-----|------|--------|--------|---------|
-| /blog/best-crm-2024 | #8 | 5,000 | 120 | 评测文章 |
-| /guide/crm-comparison | #12 | 3,200 | 45 | 对比指南 |
-| /products/crm | #15 | 1,800 | 30 | 产品页 |
+| URL | Position | Impressions | Clicks | Content Angle |
+|-----|----------|-------------|--------|---------------|
+| /blog/best-crm-2024 | #8 | 5,000 | 120 | Review article |
+| /guide/crm-comparison | #12 | 3,200 | 45 | Comparison guide |
+| /products/crm | #15 | 1,800 | 30 | Product page |
 
-**诊断**: 三个页面内容角度不同，但标题/H1 都在抢 "best crm"
+**Diagnosis**: Three pages have different angles but titles/H1s all target "best crm"
 
-**建议**: 差异化策略
-- /blog/best-crm-2024 → 保留，主攻 "best crm software"
-- /guide/crm-comparison → 改为 "crm comparison guide"
-- /products/crm → 改为品牌词 "YourBrand CRM features"
+**Recommendation**: Differentiation strategy
+- /blog/best-crm-2024 → Keep, primary target for "best crm software"
+- /guide/crm-comparison → Retarget to "crm comparison guide"
+- /products/crm → Retarget to brand term "YourBrand CRM features"
 
 ---
 
-### 蚕食组 #2: "how to use crm"
+### Group #2: "how to use crm"
 
-| URL | 排名 | 内容重叠 |
-|-----|------|---------|
+| URL | Position | Content Overlap |
+|-----|----------|-----------------|
 | /blog/crm-tutorial | #11 | 80% |
 | /help/getting-started | #14 | 75% |
 
-**诊断**: 两个页面内容高度重叠
+**Diagnosis**: Two pages with highly overlapping content
 
-**建议**: 合并策略
-- 合并到 /blog/crm-tutorial（流量更高）
-- /help/getting-started → 301 到合并后的页面
-- 或：/help/getting-started 改写为产品特定教程
+**Recommendation**: Merge strategy
+- Merge into /blog/crm-tutorial (higher traffic)
+- 301 redirect /help/getting-started to merged page
+- Or: Rewrite /help/getting-started as product-specific tutorial
 
 ---
 
-## 解决方案汇总
+## Solution Summary
 
-| 关键词 | 策略 | 保留 URL | 处理 URL |
-|--------|------|---------|---------|
-| best crm software | 差异化 | /blog/best-crm-2024 | 其他改标题 |
-| how to use crm | 合并 | /blog/crm-tutorial | 301 重定向 |
+| Keyword | Strategy | Keep URL | Action for Others |
+|---------|----------|----------|-------------------|
+| best crm software | Differentiate | /blog/best-crm-2024 | Update titles |
+| how to use crm | Merge | /blog/crm-tutorial | 301 redirect |
 | ... | ... | ... | ... |
 ```
 
 ---
 
-## 四种解决策略
+## Four Resolution Strategies
 
-### 1. 合并（Merge）
+### 1. Merge
 
-**适用**：内容高度重叠（>70%）
-
-```
-A + B → A（更好的那个）
-B → 301 到 A
-```
-
-**操作**：
-- 选择流量/排名更好的页面
-- 把另一个页面的独特内容合并过来
-- 设置 301 重定向
-- 更新内链指向
-
-### 2. 重定向（Redirect）
-
-**适用**：其中一个页面明显更弱
+**When**: Content overlap >70%
 
 ```
-弱页面 → 301 到强页面
+A + B → A (the better one)
+B → 301 to A
 ```
 
-**操作**：
-- 直接 301，不合并内容
-- 确保强页面覆盖了弱页面的意图
+**Steps**:
+- Pick the page with better traffic/ranking
+- Merge unique content from the other page
+- Set up 301 redirect
+- Update internal links
 
-### 3. 差异化（Differentiate）
+### 2. Redirect
 
-**适用**：两个页面服务不同意图
-
-```
-A → 关键词 X
-B → 关键词 Y（相关但不同）
-```
-
-**操作**：
-- 修改标题、H1、meta description
-- 调整内容角度
-- 更新内链锚文本
-
-### 4. 删除（Delete）
-
-**适用**：页面没有价值
+**When**: One page is clearly weaker
 
 ```
-低质量页面 → 删除或 noindex
+Weak page → 301 to strong page
 ```
 
-**操作**：
-- 410 删除（明确告诉 Google）
-- 或 noindex（保留但不参与排名）
+**Steps**:
+- 301 redirect directly, no content merge
+- Ensure strong page covers weak page's intent
+
+### 3. Differentiate
+
+**When**: Two pages serve different intents
+
+```
+A → Keyword X
+B → Keyword Y (related but different)
+```
+
+**Steps**:
+- Modify title, H1, meta description
+- Adjust content angle
+- Update internal link anchor text
+
+### 4. Delete
+
+**When**: Page has no value
+
+```
+Low-quality page → Delete or noindex
+```
+
+**Steps**:
+- 410 delete (explicitly tell Google)
+- Or noindex (keep but don't rank)
 
 ---
 
-## 使用方式
+## Usage
 
 ```bash
-# 有 GSC 数据
-/30x-seo cannibalization --gsc [csv文件]
+# With GSC data
+/seo cannibalization --gsc [csv-file]
 
-# 指定关键词列表
-/30x-seo cannibalization --keywords "keyword1, keyword2, ..."
+# With keyword list
+/seo cannibalization --keywords "keyword1, keyword2, ..."
 
-# 分析整站
-/30x-seo cannibalization https://example.com
+# Analyze entire site
+/seo cannibalization https://example.com
 ```
 
 ---
 
-## 预防蚕食
+## Prevention
 
-### 关键词映射
+### Keyword Mapping
 
-在写新内容前，检查是否已有页面覆盖该关键词：
+Before writing new content, check if existing pages cover that keyword:
 
 ```markdown
-| 目标关键词 | 已有页面 | 状态 |
-|-----------|---------|------|
-| best crm | /blog/best-crm-2024 | 已覆盖 |
-| crm pricing | — | 可以写 |
-| crm vs erp | /blog/crm-erp-difference | 已覆盖 |
+| Target Keyword | Existing Page | Status |
+|----------------|---------------|--------|
+| best crm | /blog/best-crm-2024 | Covered |
+| crm pricing | — | Available |
+| crm vs erp | /blog/crm-erp-difference | Covered |
 ```
 
-### 内容规划原则
+### Content Planning Principles
 
-1. **一个关键词 = 一个页面**
-2. 新内容前先查关键词映射
-3. 定期跑 cannibalization 检测
-4. 内链锚文本要和目标关键词一致
+1. **One keyword = One page**
+2. Check keyword mapping before new content
+3. Run cannibalization detection regularly
+4. Keep internal link anchors consistent with target keywords
 
 ---
 
-## 与其他技能的关系
+## Related Skills
 
-| 相关技能 | 关系 |
-|---------|------|
-| 30x-seo-keywords | 关键词研究时建立映射 |
-| 30x-seo-internal-links | 修复后更新内链 |
-| 30x-seo-redirects | 执行 301 重定向 |
-| 30x-seo-content-writer | 差异化时重写内容 |
+| Skill | Relationship |
+|-------|--------------|
+| 30x-seo-keywords | Build mapping during keyword research |
+| 30x-seo-internal-links | Update links after fixing |
+| 30x-seo-redirects | Execute 301 redirects |
+| 30x-seo-content-writer | Rewrite for differentiation |
 
-[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+[PROTOCOL]: Update this header on changes, then check CLAUDE.md

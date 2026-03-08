@@ -164,4 +164,4 @@ Measure against all other pages in the programmatic set. Shared headers, footers
 - URL pattern adjustments
 - Quality gate compliance actions
 
-[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+[PROTOCOL]: Update this header on changes, then check CLAUDE.md

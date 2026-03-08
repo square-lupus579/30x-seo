@@ -170,4 +170,4 @@ Sorted by file size impact (largest savings first):
 4. Enable lazy loading on X below-fold images
 5. Compress X oversized images
 
-[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+[PROTOCOL]: Update this header on changes, then check CLAUDE.md

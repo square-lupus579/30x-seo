@@ -153,4 +153,4 @@ When generating schema for a page:
 - Validation fixes needed
 - Generated code for implementation
 
-[PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md
+[PROTOCOL]: Update this header on changes, then check CLAUDE.md
