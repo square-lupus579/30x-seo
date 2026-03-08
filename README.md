@@ -1,10 +1,10 @@
 # 30x SEO
 
-> 21 production-ready SEO skills for Claude Code. Full-stack SEO automation: technical audits, content optimization, keyword research, backlink analysis, and AI visibility monitoring.
+> 22 production-ready SEO skills for Claude Code, organized in 8 categories. Full-stack SEO automation: audits, technical SEO, links, content, planning, programmatic SEO, monitoring, and keyword research.
 
 ## Why 30x SEO?
 
-- **Complete Coverage**: Technical SEO → Content → Keywords → Backlinks → AI Visibility
+- **Complete Coverage**: 8 categories, 22 skills, full SEO workflow
 - **AI-Native**: Built for Claude Code, not retrofitted from legacy tools
 - **2026 Ready**: AI Overviews, GEO optimization, LLM citation tracking
 - **No MCP Dependencies**: Direct API calls, zero middleware issues
@@ -12,112 +12,143 @@
 ## Quick Start
 
 ```bash
-# Clone
 git clone https://github.com/norahe0304-art/30x-seo.git ~/.openclaw/skills/30x-seo
+```
 
-# Configure DataForSEO (for keywords/backlinks/SERP/AI visibility)
-mkdir -p ~/.config/dataforseo
-echo "YOUR_BASE64_CREDENTIALS" > ~/.config/dataforseo/auth
+**Optional: Configure DataForSEO** (for keywords/backlinks/SERP/AI visibility)
+
+```bash
+echo -n "email:password" | base64 > ~/.config/dataforseo/auth
 chmod 600 ~/.config/dataforseo/auth
 ```
 
-**Generate Base64 credentials:**
-```bash
-echo -n "email@example.com:api-password" | base64
-```
+---
 
-## Skills Overview
+## Skills Overview (8 Categories, 22 Skills)
 
-### Technical SEO (8 skills)
+### 1. Audit (1 skill)
 
 | Skill | What it does |
 |-------|--------------|
-| `seo-technical` | 8-category audit: crawlability, indexability, security, URLs, mobile, Core Web Vitals, structured data, JS rendering |
-| `seo-sitemap` | Validate XML sitemaps, detect issues, generate new ones |
-| `seo-hreflang` | Multi-language/region SEO: self-refs, return tags, x-default |
-| `seo-schema` | Detect, validate, generate JSON-LD structured data |
-| `seo-images` | Alt text, formats, sizing, lazy loading, CDN usage |
-| `seo-redirects` | Chains, loops, soft 404s, external leaks |
-| `seo-internal-links` | Orphan pages, click depth, anchor text, link equity |
-| `seo-geo-technical` | AI crawler management: GPTBot, ClaudeBot, llms.txt |
+| `30x-seo-page` | Deep single-page analysis: title, meta, headings, links, images, Schema, E-E-A-T |
 
-### Content Optimization (8 skills)
+### 2. Technical SEO (5 skills)
 
 | Skill | What it does |
 |-------|--------------|
-| `seo-content-audit` | E-E-A-T scoring + AI citability analysis |
-| `seo-content-brief` | Generate briefs from keyword research |
-| `seo-content-writer` | Writing guidelines for SEO + AI optimization |
-| `seo-content-decay` | Detect declining content, recommend updates |
-| `seo-cannibalization` | Find keyword conflicts between pages |
-| `seo-page` | Deep single-page analysis |
-| `seo-competitor-pages` | Compare against SERP top 10 |
-| `seo-programmatic` | Scale content with quality gates |
+| `30x-seo-technical` | 8-category audit: crawlability, indexability, security, URLs, mobile, CWV, structured data, JS |
+| `30x-seo-sitemap` | Validate XML sitemaps, detect issues, generate new ones |
+| `30x-seo-hreflang` | Multi-language SEO: self-refs, return tags, x-default, ISO codes |
+| `30x-seo-schema` | Detect, validate, generate JSON-LD structured data |
+| `30x-seo-geo-technical` | AI crawler management: GPTBot, ClaudeBot, llms.txt, SSR check |
 
-### Keywords & SERP (3 skills) — *Requires DataForSEO*
+### 3. Links (3 skills)
 
 | Skill | What it does |
 |-------|--------------|
-| `seo-keywords` | Ideas, volume, difficulty, intent, trends |
-| `seo-serp` | Live SERP, rankings, historical data, features |
-| `seo-backlinks` | Profile, anchors, toxic links, gap analysis |
+| `30x-seo-internal-links` | Orphan pages, click depth, anchor text, link equity distribution |
+| `30x-seo-backlinks` | Profile, anchors, toxic links, gap analysis *(DataForSEO)* |
+| `30x-seo-redirects` | Chains, loops, 301/302 mix, protocol issues, trailing slashes |
 
-### AI Visibility (2 skills) — *Requires DataForSEO*
+### 4. Content (6 skills)
 
 | Skill | What it does |
 |-------|--------------|
-| `seo-ai-visibility` | Track brand mentions in ChatGPT, Claude, Perplexity, Gemini, Google AI Overview |
-| `seo-plan` | Generate comprehensive SEO strategy |
+| `30x-seo-content-audit` | E-E-A-T scoring + AI citability analysis |
+| `30x-seo-images` | Alt text, file sizes, formats (WebP/AVIF), lazy loading, CLS |
+| `30x-seo-content-decay` | Detect declining content, recommend refresh priorities |
+| `30x-seo-cannibalization` | Find keyword conflicts between pages |
+| `30x-seo-content-brief` | Analyze SERP top 10, generate content briefs |
+| `30x-seo-content-writer` | SEO + AI optimized writing guidelines |
+
+### 5. Planning (2 skills)
+
+| Skill | What it does |
+|-------|--------------|
+| `30x-seo-plan` | Competitor analysis, keyword strategy, content calendar, 4-phase roadmap |
+| `30x-seo-architecture` | URL structure, navigation design, internal linking strategy |
+
+### 6. Programmatic SEO (2 skills)
+
+| Skill | What it does |
+|-------|--------------|
+| `30x-seo-programmatic` | Scale content: data sources, templates, quality gates, index control |
+| `30x-seo-competitor-pages` | X vs Y comparisons, alternatives pages, feature matrices |
+
+### 7. Monitoring (2 skills)
+
+| Skill | What it does |
+|-------|--------------|
+| `30x-seo-serp` | Live SERP, rankings, historical data, SERP features *(DataForSEO)* |
+| `30x-seo-ai-visibility` | Track mentions in ChatGPT, Claude, Perplexity, Gemini, AI Overview *(DataForSEO)* |
+
+### 8. Data (1 skill)
+
+| Skill | What it does |
+|-------|--------------|
+| `30x-seo-keywords` | Ideas, volume, difficulty, intent, trends *(DataForSEO)* |
+
+---
 
 ## Commands
 
 ```bash
+# Audit
+/30x-seo page https://example.com/page
+
 # Technical
-/seo technical https://example.com
-/seo schema https://example.com
-/seo sitemap analyze https://example.com/sitemap.xml
+/30x-seo technical https://example.com
+/30x-seo schema https://example.com
+/30x-seo sitemap https://example.com/sitemap.xml
+
+# Links
+/30x-seo internal-links https://example.com
+/30x-seo redirects https://example.com
+/30x-seo backlinks profile example.com        # DataForSEO
 
 # Content
-/seo content-audit https://example.com/page
-/seo content-brief "target keyword"
+/30x-seo content-audit https://example.com/page
+/30x-seo content-brief "target keyword"
 
-# Keywords & SERP (DataForSEO required)
-/seo keywords research "seed keyword"
-/seo serp check "keyword"
-/seo backlinks profile example.com
+# Planning
+/30x-seo plan saas
+/30x-seo architecture https://example.com
 
-# AI Visibility (DataForSEO required)
-/seo ai-visibility domain example.com
-/seo ai-visibility keyword "best crm software"
+# Programmatic
+/30x-seo programmatic plan
+/30x-seo competitor-pages generate
+
+# Monitoring
+/30x-seo serp check "keyword"                 # DataForSEO
+/30x-seo ai-visibility domain example.com     # DataForSEO
+
+# Data
+/30x-seo keywords research "seed keyword"     # DataForSEO
 ```
 
-## Architecture
-
-```
-30x-seo/
-├── skills/           # 21 SEO skills
-│   └── 30x-seo-*/    # Individual skill directories
-├── agents/           # 6 subagents for parallel execution
-├── docs/             # Architecture, commands, MCP integration
-├── schema/           # JSON-LD templates
-└── seo/              # Main skill + reference materials
-```
+---
 
 ## Dependencies
 
-| Skill Category | Count | Dependency |
-|----------------|-------|------------|
-| Technical SEO | 8 | WebFetch (built-in) |
-| Content | 8 | WebFetch (built-in) |
-| Keywords/SERP/Backlinks | 3 | DataForSEO API |
-| AI Visibility | 2 | DataForSEO API |
+| Category | Skills | Dependency |
+|----------|--------|------------|
+| Audit | 1 | WebFetch |
+| Technical SEO | 5 | WebFetch |
+| Links | 3 | WebFetch + DataForSEO (backlinks) |
+| Content | 6 | WebFetch |
+| Planning | 2 | WebFetch |
+| Programmatic SEO | 2 | WebFetch |
+| Monitoring | 2 | DataForSEO |
+| Data | 1 | DataForSEO |
 
-**16 skills work without any API configuration.**
+**18 skills work without any API. 4 skills require DataForSEO.**
+
+---
 
 ## DataForSEO Setup
 
 1. Sign up at [app.dataforseo.com](https://app.dataforseo.com)
-2. Get credentials from Settings → API Access
+2. Get credentials: Settings → API Access
 3. Create auth file:
 
 ```bash
@@ -135,13 +166,7 @@ curl -s -X POST "https://api.dataforseo.com/v3/dataforseo_labs/google/keyword_su
 # Returns 20000 = success
 ```
 
-## What's Included
-
-- **9,300+ lines** of SEO guidance
-- **2025-2026 updates**: INP metrics, AI Overview optimization, E-E-A-T guidelines
-- **AI visibility monitoring**: Track citations across LLMs
-- **GEO optimization**: Generative Engine Optimization for AI search
-- **Quality gates**: Prevent thin content, doorway pages
+---
 
 ## License
 
