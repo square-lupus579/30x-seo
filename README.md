@@ -1,4 +1,11 @@
-# 30x SEO
+```
+  _____ _____       _____  _____ _____
+ |____ |  _  |     /  ___||  ___|  _  |
+     / / | | |_  __\ `--. | |__ | | | |
+     \ \ | | \ \/ / `--. \|  __|| | | |
+ .___/ / \_/ />  < /\__/ /| |___\ \_/ /
+ \____/\___//_/\_\\____/ \____/ \___/
+```
 
 > 22 production-ready SEO skills + Squirrelscan CLI for Claude Code, organized in 8 categories. Full-stack SEO automation: audits, technical SEO, links, content, planning, programmatic SEO, monitoring, and keyword research.
 
