@@ -2,152 +2,83 @@
 
 ## Prerequisites
 
-- **Python 3.8+** with pip
-- **Git** for cloning the repository
 - **Claude Code CLI** installed and configured
+- **Git** for cloning the repository
 
 Optional:
-- **Playwright** for screenshot capabilities
+- **DataForSEO account** for keywords/backlinks/SERP/AI visibility skills
+- **Google Search Console** for monitoring your own site
 
 ## Quick Install
 
-### Unix/macOS/Linux
-
 ```bash
-curl -fsSL https://raw.githubusercontent.com/AgriciDaniel/claude-seo/main/install.sh | bash
+git clone https://github.com/norahe0304-art/30x-seo.git
+cd 30x-seo
 ```
 
-### Windows (PowerShell)
-
-```powershell
-irm https://raw.githubusercontent.com/AgriciDaniel/claude-seo/main/install.ps1 | iex
-```
-
-## Manual Installation
-
-1. **Clone the repository**
-
-```bash
-git clone https://github.com/AgriciDaniel/claude-seo.git
-cd claude-seo
-```
-
-2. **Run the installer**
-
-```bash
-./install.sh
-```
-
-3. **Install Python dependencies** (if not done automatically)
-
-The installer creates a venv at `~/.claude/skills/seo/.venv/`. If that fails, install manually:
-
-```bash
-# Option A: Use the venv
-~/.claude/skills/seo/.venv/bin/pip install -r ~/.claude/skills/seo/requirements.txt
-
-# Option B: User-level install
-pip install --user -r ~/.claude/skills/seo/requirements.txt
-```
-
-4. **Install Playwright browsers** (optional, for visual analysis)
-
-```bash
-pip install playwright
-playwright install chromium
-```
-
-Playwright is optional — without it, visual analysis uses WebFetch as a fallback.
-
-## Installation Paths
-
-The installer copies files to:
-
-| Component | Path |
-|-----------|------|
-| Main skill | `~/.claude/skills/seo/` |
-| Sub-skills | `~/.claude/skills/seo-*/` |
-| Subagents | `~/.claude/agents/seo-*.md` |
+That's it. Claude Code auto-discovers skills from the `skills/` directory.
 
 ## Verify Installation
 
-1. Start Claude Code:
+1. Start Claude Code in the repo directory:
 
 ```bash
 claude
 ```
 
-2. Check that the skill is loaded:
+2. Check that skills are loaded:
 
 ```
 /seo
 ```
 
-You should see a help message or prompt for a URL.
+You should see the orchestrator prompt.
+
+## DataForSEO Setup (Optional)
+
+Required for: `30x-seo-keywords`, `30x-seo-backlinks`, `30x-seo-serp`, `30x-seo-ai-visibility`
+
+1. Sign up at [app.dataforseo.com](https://app.dataforseo.com)
+2. Get credentials: Settings → API Access
+3. Create auth file:
+
+```bash
+mkdir -p ~/.config/dataforseo
+echo -n "your-email:your-password" | base64 > ~/.config/dataforseo/auth
+chmod 600 ~/.config/dataforseo/auth
+```
+
+4. Verify:
+
+```bash
+curl -s -X POST "https://api.dataforseo.com/v3/dataforseo_labs/google/keyword_suggestions/live" \
+  -H "Authorization: Basic $(cat ~/.config/dataforseo/auth)" \
+  -H "Content-Type: application/json" \
+  -d '[{"keyword": "test", "limit": 1}]' | jq '.status_code'
+# Returns 20000 = success
+```
 
 ## Uninstallation
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/AgriciDaniel/claude-seo/main/uninstall.sh | bash
-```
-
-Or manually:
+Just delete the cloned directory:
 
 ```bash
-rm -rf ~/.claude/skills/seo
-rm -rf ~/.claude/skills/seo-audit
-rm -rf ~/.claude/skills/seo-competitor-pages
-rm -rf ~/.claude/skills/seo-content
-rm -rf ~/.claude/skills/seo-geo
-rm -rf ~/.claude/skills/seo-hreflang
-rm -rf ~/.claude/skills/seo-images
-rm -rf ~/.claude/skills/seo-page
-rm -rf ~/.claude/skills/seo-plan
-rm -rf ~/.claude/skills/seo-programmatic
-rm -rf ~/.claude/skills/seo-schema
-rm -rf ~/.claude/skills/seo-sitemap
-rm -rf ~/.claude/skills/seo-technical
-rm -f ~/.claude/agents/seo-*.md
-```
-
-## Upgrading
-
-To upgrade to the latest version:
-
-```bash
-# Uninstall current version
-curl -fsSL https://raw.githubusercontent.com/AgriciDaniel/claude-seo/main/uninstall.sh | bash
-
-# Install new version
-curl -fsSL https://raw.githubusercontent.com/AgriciDaniel/claude-seo/main/install.sh | bash
+rm -rf /path/to/30x-seo
 ```
 
 ## Troubleshooting
 
 ### "Skill not found" error
 
-Ensure the skill is installed in the correct location:
+Make sure you're running Claude Code from the repo directory, or the parent directory containing the repo.
+
+### DataForSEO auth errors
+
+Check your credentials:
 
 ```bash
-ls ~/.claude/skills/seo/SKILL.md
-```
-
-If the file doesn't exist, re-run the installer.
-
-### Python dependency errors
-
-Install dependencies manually:
-
-```bash
-pip install beautifulsoup4 requests lxml playwright Pillow urllib3 validators
-```
-
-### Playwright screenshot errors
-
-Install Chromium browser:
-
-```bash
-playwright install chromium
+cat ~/.config/dataforseo/auth | base64 -d
+# Should output: your-email:your-password
 ```
 
 ### Permission errors on Unix
@@ -155,7 +86,7 @@ playwright install chromium
 Make sure scripts are executable:
 
 ```bash
-chmod +x ~/.claude/skills/seo/scripts/*.py
-chmod +x ~/.claude/skills/seo/hooks/*.py
-chmod +x ~/.claude/skills/seo/hooks/*.sh
+chmod +x scripts/*.py
+chmod +x hooks/*.py
+chmod +x hooks/*.sh
 ```
