@@ -1,6 +1,6 @@
 # 30x SEO
 
-> 22 production-ready SEO skills for Claude Code, organized in 8 categories. Full-stack SEO automation: audits, technical SEO, links, content, planning, programmatic SEO, monitoring, and keyword research.
+> 22 production-ready SEO skills + Squirrelscan CLI for Claude Code, organized in 8 categories. Full-stack SEO automation: audits, technical SEO, links, content, planning, programmatic SEO, monitoring, and keyword research.
 
 ## Why 30x SEO?
 
@@ -26,11 +26,12 @@ chmod 600 ~/.config/dataforseo/auth
 
 ## Skills Overview (8 Categories, 22 Skills)
 
-### 1. Audit (1 skill)
+### 1. Audit (1 skill + CLI)
 
 | Skill | What it does |
 |-------|--------------|
 | `30x-seo-page` | Deep single-page analysis: title, meta, headings, links, images, Schema, E-E-A-T |
+| `squirrelscan` *(CLI)* | Full-site audit: 230+ rules, 21 categories, health score 0-100. Install: `npm i -g squirrelscan` |
 
 ### 2. Technical SEO (5 skills)
 
@@ -95,6 +96,7 @@ chmod 600 ~/.config/dataforseo/auth
 ```bash
 # Audit
 /30x-seo page https://example.com/page
+squirrelscan audit https://example.com --format llm
 
 # Technical
 /30x-seo technical https://example.com
