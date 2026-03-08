@@ -1,13 +1,13 @@
 ```
-  _____ _____       _____  _____ _____
- |____ |  _  |     /  ___||  ___|  _  |
-     / / | | |_  __\ `--. | |__ | | | |
-     \ \ | | \ \/ / `--. \|  __|| | | |
- .___/ / \_/ />  < /\__/ /| |___\ \_/ /
- \____/\___//_/\_\\____/ \____/ \___/
+██████╗  ██████╗ ██╗  ██╗    ███████╗███████╗ ██████╗
+╚════██╗██╔═══██╗╚██╗██╔╝    ██╔════╝██╔════╝██╔═══██╗
+ █████╔╝██║   ██║ ╚███╔╝     ███████╗█████╗  ██║   ██║
+ ╚═══██╗██║   ██║ ██╔██╗     ╚════██║██╔══╝  ██║   ██║
+██████╔╝╚██████╔╝██╔╝ ██╗    ███████║███████╗╚██████╔╝
+╚═════╝  ╚═════╝ ╚═╝  ╚═╝    ╚══════╝╚══════╝ ╚═════╝
 ```
 
-> 22 production-ready SEO skills + Squirrelscan CLI for Claude Code, organized in 8 categories. Full-stack SEO automation: audits, technical SEO, links, content, planning, programmatic SEO, monitoring, and keyword research.
+> 23 production-ready SEO skills + Squirrelscan CLI for Claude Code, organized in 8 categories. Full-stack SEO automation: audits, technical SEO, links, content, planning, programmatic SEO, monitoring, and keyword research.
 
 ## Why 30x SEO?
 
@@ -31,7 +31,7 @@ chmod 600 ~/.config/dataforseo/auth
 
 ---
 
-## Skills Overview (8 Categories, 22 Skills + 1 Orchestrator)
+## Skills Overview (8 Categories, 23 Skills + 1 Orchestrator)
 
 ### Main Orchestrator
 
@@ -89,11 +89,12 @@ chmod 600 ~/.config/dataforseo/auth
 | `30x-seo-programmatic` | Scale content: data sources, templates, quality gates, index control |
 | `30x-seo-competitor-pages` | X vs Y comparisons, alternatives pages, feature matrices |
 
-### 7. Monitoring (2 skills)
+### 7. Monitoring (3 skills)
 
 | Skill | What it does |
 |-------|--------------|
-| `30x-seo-serp` | Live SERP, rankings, historical data, SERP features *(DataForSEO)* |
+| `30x-seo-monitor` | Monitor your own site: rankings, clicks, CTR, position changes *(Google Search Console)* |
+| `30x-seo-serp` | Track any site's SERP rankings, features, historical data *(DataForSEO)* |
 | `30x-seo-ai-visibility` | Track mentions in ChatGPT, Claude, Perplexity, Gemini, AI Overview *(DataForSEO)* |
 
 ### 8. Data (1 skill)
@@ -134,7 +135,9 @@ squirrelscan audit https://example.com --format llm
 /30x-seo competitor-pages generate
 
 # Monitoring
-/30x-seo serp check "keyword"                 # DataForSEO
+/30x-seo monitor overview                     # GSC - your site
+/30x-seo monitor keywords                     # GSC - your rankings
+/30x-seo serp check "keyword"                 # DataForSEO - any site
 /30x-seo ai-visibility domain example.com     # DataForSEO
 
 # Data
@@ -153,10 +156,10 @@ squirrelscan audit https://example.com --format llm
 | Content | 6 | WebFetch |
 | Planning | 2 | WebFetch |
 | Programmatic SEO | 2 | WebFetch |
-| Monitoring | 2 | DataForSEO |
+| Monitoring | 3 | GSC + DataForSEO |
 | Data | 1 | DataForSEO |
 
-**18 skills work without any API. 4 skills require DataForSEO.**
+**18 skills work without any API. 4 skills require DataForSEO. 1 skill requires Google Search Console.**
 
 ---
 
