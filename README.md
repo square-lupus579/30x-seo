@@ -19,7 +19,7 @@
 ## Quick Start
 
 ```bash
-npx skills add seo-30x
+npx skills add norahe0304-art/30x-seo
 ```
 
 That's it. One command installs all 23 skills.
