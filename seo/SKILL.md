@@ -12,7 +12,9 @@ description: >
   Triggers on: "SEO", "audit", "schema", "Core Web Vitals", "sitemap", "E-E-A-T",
   "AI Overviews", "GEO", "technical SEO", "content quality", "page speed",
   "structured data", "site architecture", "metadata", "AI SEO", "backlinks",
-  "link building", "keywords", "keyword research", "SERP", "AI visibility".
+  "link building", "keywords", "keyword research", "SERP", "AI visibility",
+  "local SEO", "GBP", "Google Business Profile", "Google Maps", "local pack",
+  "NAP", "local citations", "Ask Maps".
 allowed-tools:
   - Read
   - Grep
